@@ -8,12 +8,11 @@ function FetchPractice() {
     fetch(`https://dog.ceo/api/breeds/image/random/${numDogs}`)
       .then((res) => res.json())
       .then((data) => setDogs(data.message))
-      .catch((error) => console.error("Error fetching dogs:", error));
   }, [numDogs]);
 
   return (
     <>
-      <h1>Fetch API Example</h1>
+      <h1>Fetch API</h1>
       {dogs.length > 0 && (
         <div>
           {dogs.map((dog, index) => (
