@@ -10,7 +10,9 @@ function Validation() {
 
   const Formsubmit = (e) => {
     e.preventDefault();
-    console.log(name, mail, password);
+    console.log("Name:", name);
+    console.log("Email:", mail); 
+    console.log("Password:", password);
     setname("");
     setpassword("");
     setmail("");
