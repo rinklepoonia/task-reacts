@@ -1,21 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
-function FetchPratice() {
-    const [dog, Setdog] = useState("25")
-    useEffect(() => {
-        fetch("https://dog.ceo/api/breeds/image/random")
-            .then(res => res.json())
-            .then(data => Setdog(data.message))
-        // .then(data => console.log(data))
-    }, [])
-    return (
-        <>
-            <h1>fetch API</h1>
-            {dog && <img width={"200px"} height={"200px"} src={dog}></img>}
-        </>
-    );
+function FetchPractice() {
+  const [dogs, setDogs] = useState([]);
+  const numDogs = 4;
 
+  useEffect(() => {
+    fetch(`https://dog.ceo/api/breeds/image/random/${numDogs}`)
+      .then((res) => res.json())
+      .then((data) => setDogs(data.message))
+      .catch((error) => console.error("Error fetching dogs:", error));
+  }, [numDogs]);
 
+  return (
+    <>
+      <h1>Fetch API Example</h1>
+      {dogs.length > 0 && (
+        <div>
+          {dogs.map((dog, index) => (
+            <img
+              key={index}
+              src={dog}
+              alt={`Dog ${index + 1}`}
+              style={{ width: "200px", height: "200px", margin: "10px" }}
+            />
+          ))}
+        </div>
+      )}
+    </>
+  );
 }
 
-export default FetchPratice
+export default FetchPractice;
