@@ -14,6 +14,7 @@ const JsMail = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -36,7 +37,7 @@ const JsMail = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center gap-3 mb-3">
             <label>Message :</label>
-            <textarea name="message"className="resizer_none" />
+            <textarea name="message" className="resizer_none" />
           </div>
           <input type="submit" value="Send" />
         </form>
