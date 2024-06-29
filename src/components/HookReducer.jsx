@@ -14,13 +14,17 @@ const reducer = (state, action) => {
 const HookReducer = () => {
     const [count, dispatch] = useReducer(reducer, initialState)
     return (
-        <>
-            <h1>HookReducer</h1>
-            <h2>{count}</h2>
-            <button onClick={() => dispatch("add")}>add me</button>
-            <button onClick={() => dispatch("sub")}>sub me</button>
-            <button onClick={() => dispatch("refresh")}>refresh</button>
-        </>
+        <div className='my-5 py-5'>
+            <div className='container'>
+                <h1>HookReducer</h1>
+                <h2>{count}</h2>
+                <div className='d-flex gap-4 justify-content-center'>
+                    <button onClick={() => dispatch("add")}>add me</button>
+                    <button onClick={() => dispatch("sub")}>sub me</button>
+                    <button onClick={() => dispatch("refresh")}>refresh</button>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -46,37 +46,42 @@ function Validation() {
     }
   };
   return (
-    <div>
-      <h1>form-validation</h1>
-      <form onSubmit={Formsubmit}>
-        <label htmlFor="name">userName: </label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setname(e.target.value)}
-        />
-        {userError && <span>{userError}</span>}
-        <br />
-        <label htmlFor="Email">E-mail</label>
-        <input
-          type="mail"
-          value={mail}
-          onChange={(e) => setmail(e.target.value)}
-          onBlur={validateEmail}
-        />
-        {mailError && <span>{mailError}</span>}
-        <br />
-        <label htmlFor="password">password</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setpassword(e.target.value)}
-          onBlur={validatePassword}
-        />
-        {passwordError && <span>{passwordError}</span>}
-        <br />
-        <input type="submit" />
-      </form>
+    <div className="mb-5 pb-5 pt-3">
+      <div className="container">
+        <h1 className="mb-2">form-validation</h1>
+        <form onSubmit={Formsubmit}>
+          <div className="mb-2 d-flex align-items-center justify-content-center gap-3">
+            <label htmlFor="name">userName: </label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setname(e.target.value)}
+            />
+            {userError && <span>{userError}</span>}
+          </div>
+          <div className="mb-2 d-flex align-items-center justify-content-center gap-3">
+            <label htmlFor="Email">E-mail :</label>
+            <input
+              type="mail"
+              value={mail}
+              onChange={(e) => setmail(e.target.value)}
+              onBlur={validateEmail}
+            />
+            {mailError && <span>{mailError}</span>}
+          </div>
+          <div className="mb-2 d-flex align-items-center justify-content-center gap-3">
+            <label htmlFor="password">password : </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+              onBlur={validatePassword}
+            />
+            {passwordError && <span>{passwordError}</span>}
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
     </div>
   );
 }
