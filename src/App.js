@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Effects from "./components/Effects";
+import FetchPratice from "./components/FetchPratice";
+import HookReducer from "./components/HookReducer";
+import JsMail from "./components/JsMail";
+import Validation from "./components/Validation";
+import Pratice from "./components/Pratice";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Validation />
+      <JsMail />
+      <Effects />
+      <HookReducer />
+      <FetchPratice />
+      {/* <Pratice/> */}
     </div>
   );
 }
