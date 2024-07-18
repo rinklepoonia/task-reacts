@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 function Effects() {
   const [incNumber, SetincNumber] = useState(0)
   const [decNumber, SetdecNumber] = useState(0)
-  useEffect(() => {
-    alert('wait')
-  }, [])
+  // useEffect(() => {
+  //   alert('wait')
+  // }, [])
     ;
   return (
     <div className='my-5 py-5'>

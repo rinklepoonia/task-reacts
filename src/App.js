@@ -5,6 +5,7 @@ import HookReducer from "./components/HookReducer";
 import JsMail from "./components/JsMail";
 import Validation from "./components/Validation";
 import Pratice from "./components/Pratice";
+import ParamTabs from "./components/ParamTabs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <HookReducer />
       <FetchPratice />
       {/* <Pratice/> */}
+      <ParamTabs />
     </div>
   );
 }
