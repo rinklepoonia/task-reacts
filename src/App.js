@@ -16,7 +16,9 @@ function App() {
       <HookReducer />
       <FetchPratice />
       {/* <Pratice/> */}
-      <ParamTabs />
+      <div className="mt-5 mb-5">
+        <ParamTabs />
+      </div>
     </div>
   );
 }
