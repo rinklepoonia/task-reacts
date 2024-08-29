@@ -9,7 +9,7 @@ const JsMail = () => {
 
     emailjs
       .sendForm("service_a51atbf", "template_9e35k24", form.current, {
-        publicKey: "MiSFlftZGUDkStVZM",
+        publicKey: "UxHuQHuD4Cho0-NsS",
       })
       .then(
         () => {
